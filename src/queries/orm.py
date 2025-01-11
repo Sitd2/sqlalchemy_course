@@ -1,10 +1,9 @@
-from sqlalchemy import Integer, and_, cast, func, insert, inspect, or_, select, text
+from sqlalchemy import Integer, and_, func, insert, select
 from sqlalchemy.orm import aliased, contains_eager, joinedload, selectinload
 
 from database import Base, async_engine, async_session_factory, session_factory, sync_engine
 from models import ResumesOrm, VacanciesOrm, WorkersOrm, Workload
 from schemas import (
-    ResumesRelVacanciesRepliedDTO,
     ResumesRelVacanciesRepliedWithoutVacancyCompensationDTO,
     WorkersRelDTO,
 )
